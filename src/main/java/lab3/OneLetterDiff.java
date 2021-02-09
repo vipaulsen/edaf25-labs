@@ -6,7 +6,19 @@ package lab3;
  */
 public class OneLetterDiff implements WordCriteria {
   @Override public boolean adjacent(String word1, String word2) {
-    // TODO(D2): implement this!
-    return false;
+    if(word1.length() != word2.length()){
+      return false;
+    }
+    int counter = 0;
+    for(int i = 0; i < word1.length(); i++){
+      if(word1.charAt(i)!=word2.charAt(i)){
+        counter++;
+      }
+    }
+    if(counter == 1){
+      return true;
+    }else{
+      return false;
+    }
   }
 }
